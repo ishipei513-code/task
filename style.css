@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 .container {
-  max-width: 400px;
+  max-width: 480px;
   margin: 40px auto;
   background: #fff;
   border-radius: 8px;
@@ -20,9 +20,10 @@ h1 {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 #task-input {
-  flex: 1;
+  flex: 2;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -34,6 +35,7 @@ button {
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1em;
 }
 button:hover {
   background: #388e3c;
@@ -41,6 +43,7 @@ button:hover {
 #task-list {
   list-style: none;
   padding: 0;
+  margin-bottom: 16px;
 }
 .task-item {
   display: flex;
@@ -48,6 +51,7 @@ button:hover {
   justify-content: space-between;
   padding: 8px 0;
   border-bottom: 1px solid #eee;
+  gap: 8px;
 }
 .task-item.completed span {
   text-decoration: line-through;
@@ -60,7 +64,54 @@ button:hover {
   border-radius: 4px;
   padding: 4px 8px;
   cursor: pointer;
+  margin-right: 4px;
 }
 .delete-btn:hover {
   background: #b71c1c;
+}
+/* 新規追加スタイル */
+.task-section {
+  margin-bottom: 24px;
+}
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: #555;
+}
+.priority {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.priority.低 {
+  background: #e0f7fa;
+  color: #00838f;
+}
+.priority.中 {
+  background: #fff9c4;
+  color: #fbc02d;
+}
+.priority.高 {
+  background: #ffebee;
+  color: #d32f2f;
+}
+.deadline {
+  font-size: 0.9em;
+  color: #888;
+  margin-right: 8px;
+}
+.edit-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.edit-btn:hover {
+  background: #0d47a1;
+}
 }

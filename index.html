@@ -9,11 +9,28 @@
 <body>
   <div class="container">
     <h1>タスク管理</h1>
+    <div class="task-stats">
+      <span id="task-count">タスク数: 0</span>
+      <span id="task-active-count">未完了: 0</span>
+    </div>
     <form id="task-form">
       <input type="text" id="task-input" placeholder="タスクを入力..." required>
+      <select id="priority-input">
+        <option value="低">低</option>
+        <option value="中" selected>中</option>
+        <option value="高">高</option>
+      </select>
+      <input type="date" id="deadline-input">
       <button type="submit">追加</button>
     </form>
-    <ul id="task-list"></ul>
+    <div class="task-section">
+      <h2>未完了タスク</h2>
+      <ul id="task-list"></ul>
+    </div>
+    <div class="task-section">
+      <h2>完了タスク</h2>
+      <ul id="completed-task-list"></ul>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
